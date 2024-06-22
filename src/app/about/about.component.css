@@ -1,0 +1,24 @@
+.card p {
+  font-family: "Teko", sans-serif;
+  font-size: 50px;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.195);
+  a:hover {
+    color: rgba(165, 159, 42, 0.83);
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.card img {
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+}

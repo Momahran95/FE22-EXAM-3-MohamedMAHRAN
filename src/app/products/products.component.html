@@ -1,0 +1,49 @@
+<div class="container" style="background-color: #fdf2e9">
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+    @for(val of products; track val;let i = $index){ @if(val.availability ==
+    true){
+    <div>
+      <div class="card my-4">
+        <img [src]="val.image" class="card-img-top" height="250" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ val.name }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Price : {{ val.price | currency : "EUR" }}
+          </li>
+          <li
+            routerLink="/details/{{ i }}"
+            type="button"
+            class="btn btn-outline-info"
+          >
+            Details
+          </li>
+          <li
+            type="button"
+            class="btn btn-outline-success"
+            (click)="addToCart(val)"
+          >
+            Buy
+          </li>
+        </ul>
+      </div>
+    </div>
+    }@else {
+    <div>
+      <div class="card my-4">
+        <img [src]="val.image" class="card-img-top" height="250" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ val.name }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Price : {{ val.price | currency : "EUR" }}
+          </li>
+          <li class="list-group-item bg-danger">Availability :Out of Stock</li>
+        </ul>
+      </div>
+    </div>
+    } }
+  </div>
+</div>

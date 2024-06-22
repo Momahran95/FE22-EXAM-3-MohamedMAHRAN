@@ -1,0 +1,24 @@
+.footer {
+  padding: 35px;
+  background-color: rgba(234, 128, 53, 0.758);
+}
+
+.footerlist {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  list-style-type: none;
+  a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s linear;
+  }
+  a:hover {
+    color: rgba(208, 25, 25, 0.844);
+  }
+}
+
+.copyright p {
+  color: white;
+  text-align: center;
+}

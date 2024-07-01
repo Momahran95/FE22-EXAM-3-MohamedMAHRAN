@@ -10,6 +10,7 @@ import { DetailsComponent } from './details/details.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CartComponent } from './cart/cart.component';
     FooterComponent,
     ProductsComponent,
     CartComponent,
+    CustomersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
